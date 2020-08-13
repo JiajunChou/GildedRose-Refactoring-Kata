@@ -35,6 +35,8 @@ public class Item {
     return this.name + ", " + this.sellIn + ", " + this.quality;
   }
 
+  public void upgrade() {};
+
   public void increaseQuality() {
     if (getQuality() < 50) {
       setQuality(getQuality() + 1);
