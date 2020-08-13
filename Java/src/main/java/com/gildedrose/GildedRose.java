@@ -22,12 +22,14 @@ class GildedRose {
 
         updateBackstagePassesConcert(item);
       } else {
+
         updateCommonItem(item);
       }
     }
   }
 
   public void updateAgedBrie(Item item) {
+
     increaseQuality(item);
 
     item.sellIn = item.sellIn - 1;
@@ -38,16 +40,15 @@ class GildedRose {
   }
 
   public void updateBackstagePassesConcert(Item item) {
-    if (item.quality < 50) {
-      item.quality = item.quality + 1;
 
-      if (item.sellIn < 11) {
-        increaseQuality(item);
-      }
+    increaseQuality(item);
 
-      if (item.sellIn < 6) {
-        increaseQuality(item);
-      }
+    if (item.sellIn < 11) {
+      increaseQuality(item);
+    }
+
+    if (item.sellIn < 6) {
+      increaseQuality(item);
     }
 
     item.sellIn = item.sellIn - 1;
