@@ -47,7 +47,7 @@ class GildedRoseTest {
 
   @Test
   public void item_with_date_passed_quality_decrease_by_twice() {
-    Item[] items = new Item[] {new Item("foo", -1, 40)};
+    Item[] items = new Item[] {new CommonItem("foo", -1, 40)};
     GildedRose app = new GildedRose(items);
 
     app.updateQuality();
